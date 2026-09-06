@@ -2,17 +2,17 @@
 set -euo pipefail
 
 SRC="$(cd "$(dirname "$0")" && pwd)"
-DEST="$HOME/.local/share/fw-radar"
+DEST="$HOME/.local/share/skyradar-screensaver"
 
 mkdir -p "$DEST"
-cp "$SRC/Radar.qml" "$DEST/Radar.qml"
+cp "$SRC/skyradar-screensaver.qml" "$DEST/skyradar-screensaver.qml"
 cp "$SRC/map.js" "$DEST/map.js"
 
 # Install the launch override, backing up the original first.
 if [[ -f /usr/bin/omarchy-launch-screensaver && ! -f /usr/bin/omarchy-launch-screensaver.orig ]]; then
   sudo cp /usr/bin/omarchy-launch-screensaver /usr/bin/omarchy-launch-screensaver.orig
 fi
-sudo cp "$SRC/omarchy-launch-screensaver.sh" /usr/bin/omarchy-launch-screensaver
+sudo cp "$SRC/skyradar-screensaver.sh" /usr/bin/omarchy-launch-screensaver
 sudo chmod 755 /usr/bin/omarchy-launch-screensaver
 
 echo "Installed."

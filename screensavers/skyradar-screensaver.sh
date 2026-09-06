@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# omarchy:summary=Launch the FlightWatch radar screensaver (QML)
+# omarchy:summary=Launch the SkyRadar screensaver (QML)
 # omarchy:group=system
 # omarchy:name=launch-screensaver
 
 # Exit early if the radar is already running
-pgrep -f '[q]ml6.*Radar\.qml' && exit 0
+pgrep -f '[q]ml6.*skyradar-screensaver\.qml' && exit 0
 
 # Allow the screensaver to be turned off but also force-started
 if omarchy-toggle-enabled screensaver-off && [[ $1 != "force" ]]; then
@@ -16,6 +16,6 @@ fi
 hyprctl eval 'hl.config({ cursor = { invisible = true } })' &>/dev/null || hyprctl keyword cursor:invisible true &>/dev/null || true
 
 # Run the radar fullscreen; restore the cursor once it exits
-QT_QPA_PLATFORM=wayland qml6 "$HOME/.local/share/fw-radar/Radar.qml"
+QT_QPA_PLATFORM=wayland qml6 "$HOME/.local/share/skyradar-screensaver/skyradar-screensaver.qml"
 
 hyprctl eval 'hl.config({ cursor = { invisible = false } })' &>/dev/null || hyprctl keyword cursor:invisible false &>/dev/null || true

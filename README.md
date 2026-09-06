@@ -2,14 +2,14 @@
 
 Miscellaneous goodies for [Omarchy](https://omarchy.org/) (Arch + Hyprland).
 
-## Screensaver: FlightWatch Radar
+## Screensaver: SkyRadar
 
 A live air-traffic radar screensaver — a fullscreen Qt Quick app that draws a
 phosphor-style scope with a rotating sweep and a trailing halo, a real
 geographic map (land/sea + country borders), and live ADS-B aircraft shown as
 ATC-style data blocks (callsign / flight level / ground speed).
 
-![Radar](screensaver/preview.png)
+![Radar](screensavers/preview.png)
 
 - **Smooth vector rendering** (anti-aliased, full resolution — not a terminal hack)
 - **Live traffic** from the [OpenSky Network](https://opensky-network.org/) over a configurable radius
@@ -25,11 +25,11 @@ ATC-style data blocks (callsign / flight level / ground speed).
 ### Install
 
 ```bash
-cd screensaver
+cd screensavers
 ./install.sh
 ```
 
-This copies the app to `~/.local/share/fw-radar/` and installs a
+This copies the app to `~/.local/share/skyradar-screensaver/` and installs a
 `/usr/bin/omarchy-launch-screensaver` override (the original is backed up to
 `omarchy-launch-screensaver.orig`).
 
@@ -44,7 +44,7 @@ the Omarchy screensaver idle timeout is reached.
 
 ### Configuration
 
-Edit the top of `screensaver/Radar.qml`:
+Edit the top of `screensavers/skyradar-screensaver.qml`:
 
 | Setting | Default | Meaning |
 |---|---|---|
@@ -59,5 +59,5 @@ Map data (`map.js`) is derived from [Natural Earth](https://www.naturalearthdata
 
 ```bash
 sudo mv /usr/bin/omarchy-launch-screensaver.orig /usr/bin/omarchy-launch-screensaver
-rm -rf ~/.local/share/fw-radar
+rm -rf ~/.local/share/skyradar-screensaver
 ```
