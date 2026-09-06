@@ -11,6 +11,8 @@ ATC-style data blocks (callsign / flight level / ground speed).
 
 ![Radar](screensavers/skyradar-screensaver/preview.png)
 
+**In motion:** [screencast.mp4](screensavers/skyradar-screensaver/screencast.mp4)
+
 - **Smooth vector rendering** (anti-aliased, full resolution — not a terminal hack)
 - **Live traffic** from the [OpenSky Network](https://opensky-network.org/) over a configurable radius
 - **Data blocks** per aircraft: callsign, flight level (above FL100, dimmed), ground speed
