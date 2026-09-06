@@ -9,7 +9,7 @@ phosphor-style scope with a rotating sweep and a trailing halo, a real
 geographic map (land/sea + country borders), and live ADS-B aircraft shown as
 ATC-style data blocks (callsign / flight level / ground speed).
 
-![Radar](screensavers/preview.png)
+![Radar](screensavers/skyradar-screensaver/preview.png)
 
 - **Smooth vector rendering** (anti-aliased, full resolution — not a terminal hack)
 - **Live traffic** from the [OpenSky Network](https://opensky-network.org/) over a configurable radius
@@ -25,7 +25,7 @@ ATC-style data blocks (callsign / flight level / ground speed).
 ### Install
 
 ```bash
-cd screensavers
+cd screensavers/skyradar-screensaver
 ./install.sh
 ```
 
@@ -44,7 +44,7 @@ the Omarchy screensaver idle timeout is reached.
 
 ### Configuration
 
-Edit the top of `screensavers/skyradar-screensaver.qml`:
+Edit the top of `screensavers/skyradar-screensaver/skyradar-screensaver.qml`:
 
 | Setting | Default | Meaning |
 |---|---|---|
